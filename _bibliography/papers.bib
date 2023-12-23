@@ -1,84 +1,83 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{wu-etal-2023-enhancing,
+    title = "Enhancing Structured Evidence Extraction for Fact Verification",
+    author = "Wu, Zirui  and
+      Hu, Nan  and
+      Feng, Yansong",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.409",
+    doi = "10.18653/v1/2023.emnlp-main.409",
+    pages = "6631--6641",
+    selected={true},
+    abstract = "Open-domain fact verification is the task of verifying claims in natural language texts against extracted evidence. FEVEROUS is a benchmark that requires extracting and integrating both unstructured and structured evidence to verify a given claim. Previous models suffer from low recall of structured evidence extraction, i.e., table extraction and cell selection. In this paper, we propose a simple but effective method to enhance the extraction of structured evidence by leveraging the row and column semantics of tables. Our method comprises two components: (i) a coarse-grained table extraction module that selects tables based on rows and columns relevant to the claim and (ii) a fine-grained cell selection graph that combines both formats of evidence and enables multi-hop and numerical reasoning. We evaluate our method on FEVEROUS and achieve an evidence recall of 60.01{\%} on the test set, which is 6.14{\%} higher than the previous state-of-the-art performance. Our results demonstrate that our method can extract tables and select cells effectively, and provide better evidence sets for verdict prediction. Our code is released at https://github.com/WilliamZR/see-st",
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{hu-etal-2023-unifee,
+    title = "{U}nif{EE}: Unified Evidence Extraction for Fact Verification",
+    author = "Hu, Nan  and
+      Wu, Zirui  and
+      Lai, Yuxuan  and
+      Zhang, Chen  and
+      Feng, Yansong",
+    editor = "Vlachos, Andreas  and
+      Augenstein, Isabelle",
+    booktitle = "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.eacl-main.82",
+    doi = "10.18653/v1/2023.eacl-main.82",
+    pages = "1150--1160",
+    selected={true},
+    abstract = "FEVEROUS is a fact extraction and verification task that requires systems to extract evidence of both sentences and table cells from a Wikipedia dump, then predict the veracity of the given claim accordingly. Existing works extract evidence in the two formats separately, ignoring potential connections between them. In this paper, we propose a Unified Evidence Extraction model (UnifEE), which uses a mixed evidence graph to extract the evidence in both formats. With the carefully-designed unified evidence graph, UnifEE allows evidence interactions among all candidates in both formats at similar granularity. Experiments show that, with information aggregated from related evidence candidates in the fusion graph, UnifEE can make better decisions about which evidence should be kept, especially for claims requiring multi-hop reasoning or a combination of tables and texts. Thus it outperforms all previous evidence extraction methods and brings significant improvement in the subsequent claim verification step.",
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
+@inproceedings{hu-etal-2022-dual,
+    title = "Dual-Channel Evidence Fusion for Fact Verification over Texts and Tables",
+    author = "Hu, Nan  and
+      Wu, Zirui  and
+      Lai, Yuxuan  and
+      Liu, Xiao  and
+      Feng, Yansong",
+    editor = "Carpuat, Marine  and
+      de Marneffe, Marie-Catherine  and
+      Meza Ruiz, Ivan Vladimir",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
+    year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.384",
+    doi = "10.18653/v1/2022.naacl-main.384",
+    pages = "5232--5242",
+    selected={true},
+    abstract = "Different from previous fact extraction and verification tasks that only consider evidence of a single format, FEVEROUS brings further challenges by extending the evidence format to both plain text and tables. Existing works convert all candidate evidence into either sentences or tables, thus often failing to fully capture the rich context in their original format from the converted evidence, let alone the context information lost during conversion. In this paper, we propose a Dual Channel Unified Format fact verification model (DCUF), which unifies various evidence into parallel streams, i.e., natural language sentences and a global evidence table, simultaneously. With carefully-designed evidence conversion and organization methods, DCUF makes the most of pre-trained table/language models to encourage each evidence piece to perform early and thorough interactions with other pieces in its original format. Experiments show that our model can make better use of existing pre-trained models to absorb evidence of two formats, thus outperforming previous works by a large margin. Our code and models are publicly available.",
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@article{huang2023lawyer,
+  title={Lawyer LLaMA Technical Report},
+  author={Huang, Quzhe and Tao, Mingxu and An, Zhenwei and Zhang, Chen and Jiang, Cong and Chen, Zhibin and Wu, Zirui and Feng, Yansong},
+  journal={arXiv preprint arXiv:2305.15062},
+  selected={true},
+  year={2023}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+@article{ren2020cellbow,
+  title={Cellbow: a robust customizable cell segmentation program},
+  author={Ren, Huixia and Zhao, Mengdi and Liu, Bo and Yao, Ruixiao and Liu, Qi and Ren, Zhipeng and Wu, Zirui and Gao, Zongmao and Yang, Xiaojing and Tang, Chao},
+  journal={Quantitative Biology},
+  volume={8},
+  pages={245--255},
+  year={2020},
+  publisher={Springer}
 }
