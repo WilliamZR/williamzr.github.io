@@ -1,83 +1,100 @@
 ---
 ---
-
-@inproceedings{wu-etal-2023-enhancing,
-    title = "Enhancing Structured Evidence Extraction for Fact Verification",
-    author = "Wu, Zirui  and
-      Hu, Nan  and
-      Feng, Yansong",
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
-    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
-    month = dec,
-    year = "2023",
-    address = "Singapore",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.emnlp-main.409",
-    doi = "10.18653/v1/2023.emnlp-main.409",
-    pages = "6631--6641",
-    selected={true},
-    abstract = "Open-domain fact verification is the task of verifying claims in natural language texts against extracted evidence. FEVEROUS is a benchmark that requires extracting and integrating both unstructured and structured evidence to verify a given claim. Previous models suffer from low recall of structured evidence extraction, i.e., table extraction and cell selection. In this paper, we propose a simple but effective method to enhance the extraction of structured evidence by leveraging the row and column semantics of tables. Our method comprises two components: (i) a coarse-grained table extraction module that selects tables based on rows and columns relevant to the claim and (ii) a fine-grained cell selection graph that combines both formats of evidence and enables multi-hop and numerical reasoning. We evaluate our method on FEVEROUS and achieve an evidence recall of 60.01{\%} on the test set, which is 6.14{\%} higher than the previous state-of-the-art performance. Our results demonstrate that our method can extract tables and select cells effectively, and provide better evidence sets for verdict prediction. Our code is released at https://github.com/WilliamZR/see-st",
+@article{wu2024protrix,
+  title    = {ProTrix: Building Models for Planning and Reasoning over Tables with Sentence Context},
+  author   = {Wu, Zirui and Feng, Yansong},
+  journal  = {arxiv preprint},
+  selected = {true},
+  year     = {2024},
+  html     = {https://arxiv.org/abs/2403.02177},
+  abstract = {Tables play a crucial role in conveying information in various domains. We propose a Plan-then-Reason framework to answer different types of user queries over tables with sentence context. The framework first plans the reasoning paths over the context, then assigns each step to program-based or textual reasoning to reach the final answer. This framework enhances the table reasoning abilities for both in-context learning and fine-tuning methods. GPT-3.5-Turbo following Plan-then-Reason framework surpasses other prompting baselines without self-consistency while using less API calls and in-context demonstrations. We also construct an instruction tuning set TrixInstruct to evaluate the effectiveness of fine-tuning with this framework. We present ProTrix model family by finetuning models on TrixInstruct. Our experiments show that ProTrix family generalizes to diverse unseen tabular tasks with only 6k training instances. We further demonstrate that ProTrix can generate accurate and faithful explanations to answer complex free-form questions. Our work underscores the importance of the planning and reasoning abilities towards a model over tabular tasks with generalizability and interpretability. We open-source our dataset and models at https://github.com/WilliamZR/ProTrix}
 }
 
-@inproceedings{hu-etal-2023-unifee,
-    title = "{U}nif{EE}: Unified Evidence Extraction for Fact Verification",
-    author = "Hu, Nan  and
-      Wu, Zirui  and
-      Lai, Yuxuan  and
-      Zhang, Chen  and
-      Feng, Yansong",
-    editor = "Vlachos, Andreas  and
-      Augenstein, Isabelle",
-    booktitle = "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics",
-    month = may,
-    year = "2023",
-    address = "Dubrovnik, Croatia",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.eacl-main.82",
-    doi = "10.18653/v1/2023.eacl-main.82",
-    pages = "1150--1160",
-    selected={true},
-    abstract = "FEVEROUS is a fact extraction and verification task that requires systems to extract evidence of both sentences and table cells from a Wikipedia dump, then predict the veracity of the given claim accordingly. Existing works extract evidence in the two formats separately, ignoring potential connections between them. In this paper, we propose a Unified Evidence Extraction model (UnifEE), which uses a mixed evidence graph to extract the evidence in both formats. With the carefully-designed unified evidence graph, UnifEE allows evidence interactions among all candidates in both formats at similar granularity. Experiments show that, with information aggregated from related evidence candidates in the fusion graph, UnifEE can make better decisions about which evidence should be kept, especially for claims requiring multi-hop reasoning or a combination of tables and texts. Thus it outperforms all previous evidence extraction methods and brings significant improvement in the subsequent claim verification step.",
+@article{liu2024llms,
+  title    = {Are llms capable of data-based statistical and causal reasoning? benchmarking advanced quantitative reasoning with data},
+  author   = {Liu, Xiao and Wu, Zirui and Wu, Xueqing and Lu, Pan and Chang, Kai-Wei and Feng, Yansong},
+  journal  = {ACL},
+  year     = {2024},
+  selected = {true},
+  html     = {https://arxiv.org/abs/2402.17644},
+  abstract = {Quantitative reasoning is a critical skill to analyze data, yet the assessment of such ability remains limited. To address this gap, we introduce the Quantitative Reasoning with Data (QRData) benchmark, aiming to evaluate Large Language Models' capability in statistical and causal reasoning with real-world data. The benchmark comprises a carefully constructed dataset of 411 questions accompanied by data sheets from textbooks, online learning materials, and academic papers. To compare models' quantitative reasoning abilities on data and text, we enrich the benchmark with an auxiliary set of 290 text-only questions, namely QRText. We evaluate natural language reasoning, program-based reasoning, and agent reasoning methods including Chain-of-Thought, Program-of-Thoughts, ReAct, and code interpreter assistants on diverse models. The strongest model GPT-4 achieves an accuracy of 58%, which has much room for improvement. Among open-source models, Deepseek-coder-instruct, a code LLM pretrained on 2T tokens, gets the highest accuracy of 37%. Analysis reveals that models encounter difficulties in data analysis and causal reasoning, and struggle in using causal knowledge and provided data simultaneously. Code and data are in https://github.com/xxxiaol/QRData}
 }
 
-@inproceedings{hu-etal-2022-dual,
-    title = "Dual-Channel Evidence Fusion for Fact Verification over Texts and Tables",
-    author = "Hu, Nan  and
-      Wu, Zirui  and
-      Lai, Yuxuan  and
-      Liu, Xiao  and
-      Feng, Yansong",
-    editor = "Carpuat, Marine  and
-      de Marneffe, Marie-Catherine  and
-      Meza Ruiz, Ivan Vladimir",
-    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-    month = jul,
-    year = "2022",
-    address = "Seattle, United States",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.naacl-main.384",
-    doi = "10.18653/v1/2022.naacl-main.384",
-    pages = "5232--5242",
-    selected={true},
-    abstract = "Different from previous fact extraction and verification tasks that only consider evidence of a single format, FEVEROUS brings further challenges by extending the evidence format to both plain text and tables. Existing works convert all candidate evidence into either sentences or tables, thus often failing to fully capture the rich context in their original format from the converted evidence, let alone the context information lost during conversion. In this paper, we propose a Dual Channel Unified Format fact verification model (DCUF), which unifies various evidence into parallel streams, i.e., natural language sentences and a global evidence table, simultaneously. With carefully-designed evidence conversion and organization methods, DCUF makes the most of pre-trained table/language models to encourage each evidence piece to perform early and thorough interactions with other pieces in its original format. Experiments show that our model can make better use of existing pre-trained models to absorb evidence of two formats, thus outperforming previous works by a large margin. Our code and models are publicly available.",
+@article{wu-etal-2023-enhancing,
+  title     = {Enhancing Structured Evidence Extraction for Fact Verification},
+  author    = {Wu, Zirui  and
+               Hu, Nan  and
+               Feng, Yansong},
+  editor    = {Bouamor, Houda  and
+               Pino, Juan  and
+               Bali, Kalika},
+  journal   = {EMNLP},
+  year      = {2023},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  html      = {https://aclanthology.org/2023.emnlp-main.409},
+  doi       = {10.18653/v1/2023.emnlp-main.409},
+  pages     = {6631--6641},
+  selected  = {true},
+  abstract  = {Open-domain fact verification is the task of verifying claims in natural language texts against extracted evidence. FEVEROUS is a benchmark that requires extracting and integrating both unstructured and structured evidence to verify a given claim. Previous models suffer from low recall of structured evidence extraction, i.e., table extraction and cell selection. In this paper, we propose a simple but effective method to enhance the extraction of structured evidence by leveraging the row and column semantics of tables. Our method comprises two components: (i) a coarse-grained table extraction module that selects tables based on rows and columns relevant to the claim and (ii) a fine-grained cell selection graph that combines both formats of evidence and enables multi-hop and numerical reasoning. We evaluate our method on FEVEROUS and achieve an evidence recall of 60.01{\%} on the test set, which is 6.14{\%} higher than the previous state-of-the-art performance. Our results demonstrate that our method can extract tables and select cells effectively, and provide better evidence sets for verdict prediction. Our code is released at https://github.com/WilliamZR/see-st}
+}
+
+@article{hu-etal-2023-unifee,
+  title     = {{U}nif{EE}: Unified Evidence Extraction for Fact Verification},
+  author    = {Hu, Nan  and
+               Wu, Zirui  and
+               Lai, Yuxuan  and
+               Zhang, Chen  and
+               Feng, Yansong},
+  editor    = {Vlachos, Andreas  and
+               Augenstein, Isabelle},
+  journal   = {EACL},
+  year      = {2023},
+  address   = {Dubrovnik, Croatia},
+  publisher = {Association for Computational Linguistics},
+  html      = {https://aclanthology.org/2023.eacl-main.82},
+  doi       = {10.18653/v1/2023.eacl-main.82},
+  pages     = {1150--1160},
+  selected  = {true},
+  abstract  = {FEVEROUS is a fact extraction and verification task that requires systems to extract evidence of both sentences and table cells from a Wikipedia dump, then predict the veracity of the given claim accordingly. Existing works extract evidence in the two formats separately, ignoring potential connections between them. In this paper, we propose a Unified Evidence Extraction model (UnifEE), which uses a mixed evidence graph to extract the evidence in both formats. With the carefully-designed unified evidence graph, UnifEE allows evidence interactions among all candidates in both formats at similar granularity. Experiments show that, with information aggregated from related evidence candidates in the fusion graph, UnifEE can make better decisions about which evidence should be kept, especially for claims requiring multi-hop reasoning or a combination of tables and texts. Thus it outperforms all previous evidence extraction methods and brings significant improvement in the subsequent claim verification step.}
+}
+
+@article{hu-etal-2022-dual,
+  title     = {Dual-Channel Evidence Fusion for Fact Verification over Texts and Tables},
+  author    = {Hu, Nan  and
+               Wu, Zirui  and
+               Lai, Yuxuan  and
+               Liu, Xiao  and
+               Feng, Yansong},
+  editor    = {Carpuat, Marine  and
+               de Marneffe, Marie-Catherine  and
+               Meza Ruiz, Ivan Vladimir},
+  journal   = {NAACL},
+  year      = {2022},
+  address   = {Seattle, United States},
+  publisher = {Association for Computational Linguistics},
+  html      = {https://aclanthology.org/2022.naacl-main.384},
+  doi       = {10.18653/v1/2022.naacl-main.384},
+  pages     = {5232--5242},
+  selected  = {true},
+  abstract  = {Different from previous fact extraction and verification tasks that only consider evidence of a single format, FEVEROUS brings further challenges by extending the evidence format to both plain text and tables. Existing works convert all candidate evidence into either sentences or tables, thus often failing to fully capture the rich context in their original format from the converted evidence, let alone the context information lost during conversion. In this paper, we propose a Dual Channel Unified Format fact verification model (DCUF), which unifies various evidence into parallel streams, i.e., natural language sentences and a global evidence table, simultaneously. With carefully-designed evidence conversion and organization methods, DCUF makes the most of pre-trained table/language models to encourage each evidence piece to perform early and thorough interactions with other pieces in its original format. Experiments show that our model can make better use of existing pre-trained models to absorb evidence of two formats, thus outperforming previous works by a large margin. Our code and models are publicly available.}
 }
 
 @article{huang2023lawyer,
-  title={Lawyer LLaMA Technical Report},
-  author={Huang, Quzhe and Tao, Mingxu and An, Zhenwei and Zhang, Chen and Jiang, Cong and Chen, Zhibin and Wu, Zirui and Feng, Yansong},
-  journal={arXiv preprint arXiv:2305.15062},
-  selected={true},
-  year={2023}
+  title    = {Lawyer LLaMA Technical Report},
+  author   = {Huang, Quzhe and Tao, Mingxu and An, Zhenwei and Zhang, Chen and Jiang, Cong and Chen, Zhibin and Wu, Zirui and Feng, Yansong},
+  journal  = {arXiv preprint },
+  selected = {false},
+  year     = {2023}
 }
 
 @article{ren2020cellbow,
-  title={Cellbow: a robust customizable cell segmentation program},
-  author={Ren, Huixia and Zhao, Mengdi and Liu, Bo and Yao, Ruixiao and Liu, Qi and Ren, Zhipeng and Wu, Zirui and Gao, Zongmao and Yang, Xiaojing and Tang, Chao},
-  journal={Quantitative Biology},
-  volume={8},
-  pages={245--255},
-  year={2020},
-  publisher={Springer}
+  title     = {Cellbow: a robust customizable cell segmentation program},
+  author    = {Ren, Huixia and Zhao, Mengdi and Liu, Bo and Yao, Ruixiao and Liu, Qi and Ren, Zhipeng and Wu, Zirui and Gao, Zongmao and Yang, Xiaojing and Tang, Chao},
+  journal   = {Quantitative Biology},
+  volume    = {8},
+  pages     = {245--255},
+  year      = {2020},
+  publisher = {Springer}
 }
+
