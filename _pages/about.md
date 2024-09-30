@@ -19,7 +19,7 @@ I am a master student at Wangxuan Institute of Computer Technology, Peking Unive
 I received my Bachelor’s degree in Intergrated Science Program from Yuanpei College, Peking University. During my undergraduate study, I worked with [Prof. Chao Tang](http://cqb.pku.edu.cn/tanglab/index.htm) at Quantitive Center of Biology. I worked on metabolic flux analysis of cyanobacteria and growth behavior of fisson yeast and budding yeast.
 
 
-My research interests include automatic fact checking, table reasoning and planning with large language models. I also study the application of large language models for biological data.
+My research interests include question answering and scientific discovery for structured data, as well as planning with large language models. 
 
 
 
